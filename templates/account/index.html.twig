@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My account- Beauty Shop{% endblock %}
+
+{% block content %}
+    <h1>My account</h1>
+   <p>Hello {{ app.user.firstname }} welcome to your account at Beauty Shop.</p>
+    <hr>
+    - Change my password<br/>
+    - Add my addresses<br/>
+    - My orders<br/>
+    <hr>
+{% endblock %}
