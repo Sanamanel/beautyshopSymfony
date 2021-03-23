@@ -34,7 +34,7 @@ class RegisterController extends AbstractController
             $password = $encoder->encodePassword($user,$user->getPassword());
             $user->setPassword($password);
 
-            $this->entityManager->persist($user);//fige la data car j'aurais besoin de l'enregistrer
+            $this->entityManager->persist($user);//fige la data car j'aurais besoin de l'enregistrer method qui permet de figer et de préparer la donner pour sa creation
             $this->entityManager->flush();//tu execute donc tu enregistre la data en bdd
 
         }

@@ -6,7 +6,7 @@
     <h1>My account</h1>
    <p>Hello {{ app.user.firstname }} welcome to your account at Beauty Shop.</p>
     <hr>
-    - Change my password<br/>
+    <a href="{{ path('account_password') }}">Update my password</a> <br/>
     - Add my addresses<br/>
     - My orders<br/>
     <hr>
