@@ -3,25 +3,35 @@
 {% block title %}Products - Beauty shop{% endblock %}
 
 {% block content %}
-<h1>Our Products</h1>
 
     <div class="row">
-        {% for product in products %}
+        <div class="col-md-3">
+            <h2>Filter</h2>
+            {{ form(form) }}
+        </div>
+        <div class="col-md-9">
+            <h2>Our Products</h2>
 
-            <div class="col-md-4">
-                <div class="product-item text-center mb-4 card" >
-                    <a href="{{ path('product', {'slug': product.slug}) }}"> <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid mb-3"></a>
-                    <h5>{{ product.name }}</h5>
-                    <span class="product-subtitle">{{ product.subtitle }}</span>
-                    <span class="product-price">{{(product.price /100 ) | number_format(2)}}€</span>
+            <div class="row">
+                {% for product in products %}
+
+                    <div class="col-md-4">
+                        <div class="product-item text-center mb-4 card" >
+                            <a href="{{ path('product', {'slug': product.slug}) }}"> <img src="/uploads/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid mb-3"></a>
+                            <h5>{{ product.name }}</h5>
+                            <span class="product-subtitle">{{ product.subtitle }}</span>
+                            <span class="product-price">{{(product.price /100 ) | number_format(2)}}€</span>
 
 
-                </div>
+                        </div>
+                    </div>
+
+
+                {% endfor %}
+
             </div>
 
-
-        {% endfor %}
-
+        </div>
     </div>
 
 
