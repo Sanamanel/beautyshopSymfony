@@ -1,3 +1,9 @@
+:root {
+    --primary: #00c0bc;
+    --secondary: #0b5351;
+    --dark: #092327;
+}
+
 .navbar-item-custom, .navbar-item-custom a{
 
     color: white;
