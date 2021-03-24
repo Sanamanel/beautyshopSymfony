@@ -20,7 +20,7 @@
             <span class="product-page-price">{{(product.price /100 ) | number_format(2)}}€</span>
             <hr>
             <p class="">{{ product.description }}</p>
-            <a href="" class="btn btn-primary">Add to cart</a>
+            <a href="{{ path('add_to_cart', {'id' : product.id}) }}" class="btn btn-primary">Add to cart</a>
 
 
         </div>
