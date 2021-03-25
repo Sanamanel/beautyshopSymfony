@@ -24,7 +24,9 @@
                            <h5 class="card-title text-capitalize">{{ address.name }}</h5>
                            <p class="card-text">{{ address.address }}, <br>
                                {{ address.postal }} - {{ address.city }} - {{ address.country }}</p>
-                           <a href="{{ path('account_address_edit', {id: address.id}) }}" class="">Edit </a> | <a href="{{ path('account_address_delete', {id: address.id}) }}" class="">Delete</a>
+                           <a href="{{ path('account_address_edit', {id: address.id}) }}" class="">Edit </a>
+                           |
+                           <a href="{{ path('account_address_delete', {id: address.id}) }}" class="">Delete</a>
                        </div>
                    </div>
                </div>

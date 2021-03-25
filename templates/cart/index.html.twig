@@ -56,7 +56,7 @@
     <div class="text-right mb-5">
        <b>Number of item:</b> {{ cart|length }}<br/>
        <b>Total:</b>{{ (total /100 ) | number_format(2)}}€
-        <a href="" class="btn btn-success btn-block mt-3">Validate</a>
+        <a href="{{ path('order') }}" class="btn btn-success btn-block mt-3">Validate</a>
     </div>
     {% else %}
         <hr>
