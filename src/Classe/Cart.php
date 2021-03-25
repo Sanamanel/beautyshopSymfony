@@ -54,10 +54,10 @@ class Cart
     {
         $cart = $this->session->get('cart', []);
 
-        if ($cart[$id] > 1) {
+        if ($cart[$id] > 1) { //retirer une quantité
             $cart[$id]--;
         } else {
-            unset($cart[$id]);
+            unset($cart[$id]); //supprimer le produit
         }
 
         return $this->session->set('cart', $cart);
@@ -72,8 +72,8 @@ class Cart
                 $product_object = $this->entityManager->getRepository(Product::class)->findOneById($id);
 
                 if (!$product_object) {
-                    $this->delete($id);
-                    continue;
+                    $this->delete($id);//si le produit n'existe pas le supprimer
+                    continue; //sort de la boucle et continue vers le suivant
                 }
 
                 $cartComplete[] = [

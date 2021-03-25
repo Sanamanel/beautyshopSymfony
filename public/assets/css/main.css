@@ -41,6 +41,14 @@ box-sizing: border-box;
 .marketing{
     margin-bottom: 150px!important;
 }
+.img-cart{
+    width:75px;
+    height:auto;
+}
+.cart-icon{
+    height: 20px !important;
+    padding-left: 15px;
+}
 footer {
     position: absolute;
     bottom: 0;
