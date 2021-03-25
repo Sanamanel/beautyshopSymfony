@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My addresses- Beauty Shop{% endblock %}
+
+{% block content %}
+    <a href="{{ path('account_address_add') }}" class="btn btn-info btn-sm float-right">Add an address</a>
+    <h1>My address</h1>
+    <p>Hello {{ app.user.firstname }} here you can manage your address.</p>
+    <a href="{{ path('account') }}">Return to my account</a> <br/>
+    <hr>
+        {% if app.user.addresses|length == 0 %}
+            <div class="alert alert-info text-center" role="alert">
+                You didn't add any address in your account, to add one, please
+                <a href="#" class="alert-link">click here</a>
+            </div>
+        {% else %}
+
+
+           <div class="row">
+            {% for address in app.user.addresses %}
+               <div class="col-md-4">
+                   <div class="card mb-4" style="width: 18rem;">
+                       <div class="card-body">
+                           <h5 class="card-title text-capitalize">{{ address.name }}</h5>
+                           <p class="card-text">{{ address.address }}, <br>
+                               {{ address.postal }} - {{ address.city }} - {{ address.country }}</p>
+                           <a href="{{ path('account_address_edit', {id: address.id}) }}" class="">Edit </a> | <a href="{{ path('account_address_delete', {id: address.id}) }}" class="">Delete</a>
+                       </div>
+                   </div>
+               </div>
+            {% endfor %}
+           </div>
+
+
+        {% endif %}
+
+{% endblock %}
