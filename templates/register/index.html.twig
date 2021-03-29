@@ -1,7 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block content %}
     <h1>Register</h1>
+    {% if notification %}
 
+        <div class="alert alert-info">{{ notification }}</div>
+        <hr>
+    {% endif %}
 
     {{ form(form) }}<!-- tu me cree un form avec method form et tu inject  le form cree dans registerController , le formulaire est généré par la classe registerType -->
 {% endblock %}
