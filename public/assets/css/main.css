@@ -104,8 +104,32 @@ margin:0 auto;
     background-size: cover;
     background-blend-mode: saturation;
 }
+/* account page*/
+.account-item{
+    background-color: #f7f8f8;
+    padding:70px;
 
+}
+.account-item a{
+  text-transform: uppercase;
+    color: #0b5351;
+    font-size: 14px;
+    font-weight:bold;
+    text-decoration:none;
+}
+.account-item a:hover{
 
+    color: #00c0bc;
+
+}
+.ico-account-page{
+   fill:#0b5351!important;
+
+}
+.ico-account-page:hover{
+    fill:#00c0bc;
+
+}
 /* footer */
 footer {
     position: absolute;

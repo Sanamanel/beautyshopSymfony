@@ -22,7 +22,7 @@ class ContactController extends AbstractController
                 $this->addFlash('notice', 'Thank you for getting in touch! One of our colleagues will get back in touch with you soon!');
 
                 $mail = new Mail();
-                $mail->send('info@bout-de-creation.com','Beauty Shop demo','form');
+               // $mail->send('info@bout-de-creation.com','Beauty Shop demo','form');
             }
 
         return $this->render('contact/index.html.twig',[
