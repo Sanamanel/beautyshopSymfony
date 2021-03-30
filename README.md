@@ -1,5 +1,5 @@
 # BeautyShop 
-## A shop with symfony
+## For studying symfony I made a demo shop with symfony 5
 ### Using API stripe and API mailjet 
 ## Technologies
 
