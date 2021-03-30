@@ -6,6 +6,9 @@
     <h1>My account</h1>
    <p>Hello {{ app.user.firstname }} welcome to your account at Beauty Shop.</p>
     <hr>
+    {% if is_granted('ROLE_ADMIN') %}
+    <a href="/admin">You are an admin, go to the backoffice</a> <br/>
+    {% endif %}
     <a href="{{ path('account_password') }}">Update my password</a> <br/>
 <a href="{{ path('account_address') }}"> Manage my addresses</a><br/>
     <a href="{{ path('account_order') }}">My orders<br/></a>
