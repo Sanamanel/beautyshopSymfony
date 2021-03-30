@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact Beauty shop{% endblock %}
+
+{% block content %}
+<h2 class="mt-4">Contact Form
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+
+    <div class="row">
+        <div class="col-md-8">
+            {{ form(form) }}
+        </div>
+        <div class="col-md-4">
+
+            <address>
+                <strong>Beauty Shop Demo</strong><br>
+                <hr>
+                Phone: 06 04 03 02 01 <br>
+                Mail: demo@beautyshop.com <br>
+
+                1355 Liege St, Suite 1128 <br>
+                Belgium
+
+            </address>
+        </div>
+    </div>
+{% endblock %}
